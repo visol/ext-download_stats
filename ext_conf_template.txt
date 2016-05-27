@@ -1,0 +1,3 @@
+# cat=general; type=string; label=Restrict logging to these frontend user groups (comma-separated list)
+restrictLoggingToUserGroup =
+

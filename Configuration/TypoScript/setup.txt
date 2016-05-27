@@ -1,0 +1,12 @@
+
+ # Module configuration
+module.tx_downloadstats {
+	persistence {
+		storagePid = {$module.tx_downloadstats.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_downloadstats.view.templateRootPath}
+		partialRootPath = {$module.tx_downloadstats.view.partialRootPath}
+		layoutRootPath = {$module.tx_downloadstats.view.layoutRootPath}
+	}
+}

@@ -1,0 +1,36 @@
+<f:layout name="Default"/>
+
+<f:section name="content">
+	<f:flashMessages renderMode="div"/>
+
+	<h1>{f:translate(key: 'submoduleTitle_listUsersAndDownloadsAction')}</h1>
+
+	<f:form action="exportUsersAndDownloads" format="xml">
+		<f:form.submit value="{f:translate(key: 'buttonExportAsExcel')}"/>
+	</f:form>
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist">
+		<tr class="t3-row-header">
+			<td>{f:translate(key: 'tableHeaderDate')}</td>
+			<td>{f:translate(key: 'tableHeaderCompany')}</td>
+			<td>{f:translate(key: 'tableHeaderFirstName')}</td>
+			<td>{f:translate(key: 'tableHeaderLastName')}</td>
+			<td>{f:translate(key: 'tableHeaderCity')}</td>
+			<td>{f:translate(key: 'tableHeaderEmail')}</td>
+			<td>{f:translate(key: 'tableHeaderFile')}</td>
+		</tr>
+		<f:for each="{downloads}" as="download">
+			<tr class="db_list_normal">
+				<td class="t3-title-column"><f:format.date format="{f:translate(key:'dateFormat')}">{download.crdate}</f:format.date></td>
+				<td class="t3-title-column">{download.feUser.company}</td>
+				<td class="t3-title-column">{download.feUser.firstName}</td>
+				<td class="t3-title-column">{download.feUser.lastName}</td>
+				<td class="t3-title-column">{download.feUser.city}</td>
+				<td class="t3-title-column">{download.feUser.email}</td>
+				<td class="t3-title-column">{download.file.originalResource.identifier}</td>
+			</tr>
+		</f:for>
+	</table>
+
+</f:section>

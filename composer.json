@@ -1,0 +1,16 @@
+{
+  "name": "visol/download-stats",
+  "type": "typo3-cms-extension",
+  "description": "Download Statistics",
+  "homepage": "https://github.com/visol/ext-download_stats",
+  "license": ["GPL-2.0+"],
+  "version": "1.0.0",
+  "require": {
+    "visol/fal-securedownload": "1.0.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Visol\\DownloadStats\\": "Classes"
+    }
+  }
+}

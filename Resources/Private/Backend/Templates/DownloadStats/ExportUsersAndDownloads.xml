@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<f:for each="{downloads}" as="download">
+	<record>
+		<Date><f:format.date format="{f:translate(key:'dateFormat')}">{download.crdate}</f:format.date></Date>
+		<Company>{download.feUser.company}</Company>
+		<FirstName>{download.feUser.firstName}</FirstName>
+		<LastName>{download.feUser.lastName}</LastName>
+		<City>{download.feUser.city}</City>
+		<Email>{download.feUser.email}</Email>
+		<File>{download.file.originalResource.identifier}</File>
+	</record>
+	</f:for>
+</data-set>

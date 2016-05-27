@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-11-07T19:45:11Z" product-name="beusertools">
+		<header/>
+		<body>
+			<trans-unit id="submoduleTitle_listUsersAndDownloadsAction">
+				<source>List users and downloads</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderDate">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderCompany">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderFirstName">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderLastName">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderCity">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderEmail">
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="tableHeaderFile">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="dateFormat">
+				<source>%Y-%m-%d %H:%M</source>
+			</trans-unit>
+			<trans-unit id="buttonExportAsExcel">
+				<source>Export as Excel XML</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

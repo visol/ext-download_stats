@@ -1,0 +1,21 @@
+# Module configuration
+module.tx_downloadstats {
+	persistence {
+		storagePid = {$module.tx_downloadstats.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_downloadstats.view.templateRootPath}
+		partialRootPath = {$module.tx_downloadstats.view.partialRootPath}
+		layoutRootPath = {$module.tx_downloadstats.view.layoutRootPath}
+	}
+}
+
+
+config.tx_extbase.persistence.classes {
+	Visol\DownloadStats\Domain\Model\FrontendUser {
+		mapping {
+			tableName = fe_users
+		}
+	}
+}
+
