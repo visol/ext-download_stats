@@ -16,6 +16,7 @@ namespace Visol\DownloadStats\Slot;
 
 use BeechIt\FalSecuredownload\Hooks\FileDumpHook;
 use TYPO3\CMS\Core\Resource\File;
+use TYPO3\CMS\Core\Resource\ProcessedFile;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\ArrayUtility;
 use TYPO3\CMS\Frontend\Utility\EidUtility;
@@ -30,11 +31,15 @@ class FalSecuredownloadBeforeFileDumpSlot
     /**
      * Log each file download if user is authenticated
      *
-     * @param File $file
+     * @param File|ProcessedFile $file
      * @param FileDumpHook $parentObject
      */
-    public function logFileDump(File $file, FileDumpHook $parentObject)
+    public function logFileDump($file, FileDumpHook $parentObject)
     {
+        if (method_exists($file, 'getOriginalFile')) {
+            // For ProcessedFile objects, use originalFile
+            $file = $file->getOriginalFile();
+        }
         /* TODO: use $parentObject::feUser if EXT:fal_securedownload makes it public. See https://github.com/beechit/fal_securedownload/issues/37 */
         $this->initializeUserAuthentication();
         if ($this->getAuthenticatedUserUid() !== null) {
