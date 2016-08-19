@@ -4,7 +4,7 @@
   "description": "Download Statistics",
   "homepage": "https://github.com/visol/ext-download_stats",
   "license": ["GPL-2.0+"],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "require": {
     "visol/fal-securedownload": "1.0.*"
   },
